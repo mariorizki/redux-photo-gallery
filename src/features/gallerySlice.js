@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const getPhotos = createAsyncThunk('photos/getPhotos', async () => {
-  const response = await fetch('https://picsum.photos/v2/list?page=3&limit=9');
+  const response = await fetch(`https://picsum.photos/v2/list?page=3&limit=12`);
   const formattedResponse = response.json();
   return formattedResponse;
 });
@@ -25,5 +25,7 @@ export const gallerySlice = createSlice({
     },
   },
 });
+
+console.log(gallerySlice);
 
 export default gallerySlice.reducer;
