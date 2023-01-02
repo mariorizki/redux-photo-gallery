@@ -26,6 +26,4 @@ export const gallerySlice = createSlice({
   },
 });
 
-console.log(gallerySlice);
-
 export default gallerySlice.reducer;
